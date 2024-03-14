@@ -1,0 +1,19 @@
+<header>
+  <p>Blog</p>
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]="['/']" routerLinkActive="active"> Home </a>
+      </li>
+      <li>
+        <a [routerLink]="['/blog']" routerLinkActive="active"> Blog </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <ng-content />
+</main>
+<footer>
+  <p>Blog</p>
+</footer>
