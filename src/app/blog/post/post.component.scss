@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  max-width: 400px;
+  border-radius: 3px;
+}
+
+.post {
+  padding: var(--padding);
+}
+
+.comments {
+  border-top: var(--border);
+  padding: var(--padding);
+}

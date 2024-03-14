@@ -1,1 +1,11 @@
-<p>post works!</p>
+<div class="post">
+  <p>{{ text }}</p>
+  <p>Likes: {{ likes }}</p>
+</div>
+@if (comments.length > 0) {
+  <div class="comments">
+    @for (comment of comments; track $index) {
+      <app-comment [comment]="comment" (liked)="liked($event)" />
+    }
+  </div>
+}

@@ -1,1 +1,4 @@
-<p>blog-page works!</p>
+<h1>Posts</h1>
+@for (post of posts; track $index) {
+  <app-post [text]="post.text" [comments]="post.comments" />
+}
