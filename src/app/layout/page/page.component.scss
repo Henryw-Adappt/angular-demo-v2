@@ -1,0 +1,39 @@
+:host {
+  display: grid;
+  grid-template: 'header' auto 'main' 1fr 'footer' auto / 1fr;
+  height: 100%;
+}
+
+header,
+main,
+footer {
+  padding: var(--padding);
+  gap: var(--gap);
+  display: flex;
+
+  p {
+    margin: 0;
+  }
+}
+
+header {
+  border-bottom: var(--border);
+  justify-content: space-between;
+}
+
+footer {
+  border-top: var(--border);
+  justify-content: end;
+}
+
+main {
+  overflow-y: auto;
+  flex-flow: column;
+  justify-content: start;
+}
+
+ul {
+  display: flex;
+  gap: var(--gap);
+  margin: 0;
+}
