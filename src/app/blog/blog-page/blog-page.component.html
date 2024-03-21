@@ -1,5 +1,4 @@
 <h1>Posts</h1>
-<p>{{ likeService.totalLikes }}</p>
 @for (post of posts; track $index) {
   <app-post [text]="post.text" [comments]="post.comments" />
 }
