@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommentComponent } from '../comment/comment.component';
+import { LikesService } from '../likes.service';
 
 @Component({
   selector: 'app-post',
@@ -14,10 +15,13 @@ export class PostComponent {
 
   @Input() public comments: string[] = [];
 
+  private _likesService = inject(LikesService);
+
   public likes = 0;
 
   public liked(event: boolean) {
     if (event) this.likes++;
     else this.likes--;
+    if (event) this._likesService.like();
   }
 }

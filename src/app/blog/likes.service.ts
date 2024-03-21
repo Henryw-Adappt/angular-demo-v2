@@ -13,6 +13,7 @@ export class LikesService {
   }
 
   public like() {
+    console.log('like');
     this._likes++;
   }
 }
